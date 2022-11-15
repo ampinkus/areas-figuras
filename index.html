@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Add Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!--Add external Stylesheet-->
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+    <!-- HTML code -->
+    <div class="container-fluid  bg-info ">
+        <h1 class="text-center">* Cálculo de áreas *</h1>
+        <div class="row">
+            <div class="col-sm-6" style="background-color:aquamarine;">
+                <h3 class="text-center">Área y perímetro del Triángulo</h3>
+                <div class="container mt-3">
+                    <h4>Ingrese la longitud de los lados:</h4>
+                    <form action="/action_page" id="triangleForm">
+                        <div class="mb-3 mt-3">
+                            <label for="ladoA">Lado A</label>
+                            <input type="text" class="form-control" id="ladoA" placeholder="Lado A" name="ladoA">
+                        </div>
+                        <div class="mb-3">
+                            <label for="LadoB">Lado B</label>
+                            <input type="text" class="form-control" id="ladoB" placeholder="Lado B" name="ladoB">
+                        </div>
+                        <div class="mb-3">
+                            <label for="LadoC">Lado C</label>
+                            <input type="text" class="form-control" id="ladoC" placeholder="Lado C" name="ladoC">
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="areaTriangulo">Área</button>
+                        <button type="submit" class="btn btn-primary" id="perimTriangulo">Perímetro</button>
+                        <button type="submit" class="btn btn-primary" id="esTriangulo">Es Triángulo?</button>
+                    </form>
+                    <div class="mb-3 mt-3">
+                        <label for="areaT">Área Triángulo</label>
+                        <input type="text" class="form-control" id="areaT" placeholder="Área Triángulo" name="areaT">
+                    </div>
+                    <div class="mb-3">
+                        <label for="perimT">Perímetro Triángulo</label>
+                        <input type="text" class="form-control" id="perimT" placeholder="Perímetro Triángulo"
+                            name="perimT">
+                    </div>
+                    <button type="button" class="btn btn-info" data-bs-toggle="collapse"
+                        data-bs-target="#demo">Ayuda</button>
+                    <div id="demo" class="collapse">
+                        Ingrese los valores de los lados del triángulo en los campos Lado A, LadoB y LadoC.
+                        Presione el boton <b>Área</b> para obtener el área del triángulo.
+                        Presione el boton <b>Es Triángulo?</b> para confirmar que los lados ingresados forman un triángulo. Un mensaje lo alertará sobre el resultado.
+                        Presione el boton <b>Perímetro</b> para obtener el perímetro del triángulo.
+                        Si uno de los resultados es <b>NaN</b> significa que no esta ingresando valores adecuados!
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6" style="background-color:cadetblue;">
+                <h3 class="text-center">Área y perímetro de la Circunferencia</h3>
+                <div class="container mt-3">
+                    <h4>Ingrese el radio:</h4>
+                    <form action="/action_page" id="circleForm">
+                        <div class="mb-3 mt-3">
+                            <label for="radio">Radio</label>
+                            <input type="text" class="form-control" id="radio" placeholder="Radio" name="radio">
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="areaCircunf">Área</button>
+                        <button type="submit" class="btn btn-primary" id="perimCircunf">Perímetro</button>
+                    </form>
+                    <div class="mb-3 mt-3">
+                        <label for="areaC">Área Circunferencia</label>
+                        <input type="text" class="form-control" id="areaC" placeholder="Área Circunferencia"
+                            name="areaC">
+                    </div>
+                    <div class="mb-3">
+                        <label for="perimC">Perímetro Circunferencia</label>
+                        <input type="text" class="form-control" id="perimC" placeholder="Perímetro Circunferencia"
+                            name="perimC">
+                    </div>
+                    <button type="button" class="btn btn-info" data-bs-toggle="collapse"
+                        data-bs-target="#demo">Ayuda</button>
+                    <div id="demo" class="collapse">
+                        Ingrese el radio de la circunferencia.
+                          Presione el boton <b>Área</b> para obtener el área de la circunferencia.
+                        Presione el boton <b>Perímetro</b> para obtener el perímetro de la circunferencia.
+                        Si uno de los resultados es <b>NaN</b> significa que no esta ingresando valores adecuados!
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Add external Javascript-->
+    <script type="text/javascript" src="app.js"></script>
+    <!--Add Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
