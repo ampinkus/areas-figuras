@@ -1,6 +1,6 @@
 
 
-// Tengo que evitar que al apretar algun boton la <forma> me lleve a otra página. 
+// Tengo que evitar que al apretar algún botón la <forma> me lleve a otra página. 
 const triangleForm = document.querySelector('#triangleForm');
 triangleForm.addEventListener('submit', function (e) {
     e.preventDefault();
@@ -11,11 +11,11 @@ circleForm.addEventListener('submit', function (e) {
     e.preventDefault();
 })
 
-// AREA Y PERIMETRO DEL TRIANGULO
+// AREA Y PERÍMETRO DEL TRIANGULO
 
 // Calculo el area del triangulo
 var setAreaT = document.getElementById("areaT"); // selecciono el campo donde imprimir el area
-document.getElementById('areaTriangulo').onclick = printAreaT; // selecciono el boton para calcular el area
+document.getElementById('areaTriangulo').onclick = printAreaT; // selecciono el botón para calcular el area
 function printAreaT(clicked) {
     const ladoA = parseFloat(document.querySelector('#ladoA').value); // selecciono los valores de los campos y los paso a Float (originalmente son textos - string)
     const ladoB = parseFloat(document.querySelector('#ladoB').value);
@@ -26,8 +26,8 @@ function printAreaT(clicked) {
 }
 
 // Calculo el perimetro del triangulo
-var setPerimetroT = document.getElementById("perimT"); //selecciono el campo donde imprimir el perimetro
-document.getElementById('perimTriangulo').onclick = printPerimT; // selecciono el boton para calcular el perimetro
+var setPerimetroT = document.getElementById("perimT"); //selecciono el campo donde imprimir el perímetro
+document.getElementById('perimTriangulo').onclick = printPerimT; // selecciono el botón para calcular el perímetro
 function printPerimT(clicked) {
     const ladoA = parseInt(document.querySelector('#ladoA').value);  // selecciono los valores de los campos y los paso a Int (originalmente son textos - string)
     const ladoB = parseInt(document.querySelector('#ladoB').value);
@@ -38,7 +38,7 @@ function printPerimT(clicked) {
 }
 
 // Es un triangulo?
-document.getElementById('esTriangulo').onclick = esTrian; // selecciono el boton para verificar si es un triangulo
+document.getElementById('esTriangulo').onclick = esTrian; // selecciono el botón para verificar si es un triangulo
 function esTrian(clicked){
     const ladoA = parseInt(document.querySelector('#ladoA').value);  // selecciono los valores de los campos y los paso a Int (originalmente son textos - string)
     const ladoB = parseInt(document.querySelector('#ladoB').value);
@@ -52,27 +52,27 @@ function esTrian(clicked){
 }
 
 
-// funcion para calcular el area de un triangulo dados los valores de los lados
+// función para calcular el area de un triangulo dados los valores de los lados (Formula de Heron)
 function areaHeron(ladoA, ladoB, ladoC) {
     semiPerimetro = (ladoA + ladoB + ladoC) / 2;
     area = Math.sqrt(semiPerimetro * (semiPerimetro - ladoA) * (semiPerimetro - ladoB) * (semiPerimetro - ladoC));
     return area;
 }
 
-// funcion para determinar si los valores de los lados conforman un triangulo
+// función para determinar si los valores de los lados conforman un triangulo
 function esTriangulo(a, b, c) {
     if (a + b <= c || a + c <= b || b + c <= a){
             return 0;}
-        else{
+    else{
             return 1;}
 }
 
 
-// AREA Y PERIMETRO DE LA CIRCUNFERENCIA
+// AREA Y PERÍMETRO DE LA CIRCUNFERENCIA
 
 // Calculo el area de la circunferencia:  
 var setAreaC = document.getElementById("areaC"); // selecciono el campo donde imprimir el area
-document.getElementById('areaCircunf').onclick = printAreaC; // selecciono el boton para calcular el area
+document.getElementById('areaCircunf').onclick = printAreaC; // selecciono el botón para calcular el area
 function printAreaC(clicked) {
     const radioC = parseFloat(document.querySelector('#radio').value);
     let area = radioC * radioC * Math.PI;
@@ -81,7 +81,7 @@ function printAreaC(clicked) {
 }
 
 var setPerimC = document.getElementById("perimC"); // selecciono el campo donde imprimir el area
-document.getElementById('perimCircunf').onclick = printPerimC; // selecciono el boton para calcular el area
+document.getElementById('perimCircunf').onclick = printPerimC; // selecciono el botón para calcular el area
 function printPerimC(clicked) {
     const radioC = parseFloat(document.querySelector('#radio').value);
     let perimetro = radioC * 2 * Math.PI;
